@@ -1,0 +1,238 @@
+body{
+    font-family: "Comfortaa", cursive;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #272b30;
+    color: white;
+    overflow: hidden;
+}
+body::-webkit-scrollbar {
+    width: 13px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #7F8498; 
+    border-radius: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #3A497B; 
+}
+.active{
+    color: #0099CC !important;
+}
+header img{
+    max-height: 30vh;
+    object-fit: cover;
+}
+nav{
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 999 !important;
+    
+}
+.navbar-mine{
+    display: flex;
+    list-style: none;
+    
+}
+.nav-link{
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+    font-size: 14px;
+    transition: all .3s;
+}
+.nav-content{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.nav-link:hover{
+    color: #0099CC;
+}
+.main-nav{
+    background-color:#3A497B;
+    border-radius: 20px;
+    width: 75%;
+    margin: auto;
+    padding:  10px;
+    /* bottom: 30px;  */
+    box-shadow: 0px 0px 9px 1px black;
+}
+
+.logo-img{
+    width: 50px;
+    padding-right: 5px;
+}
+.logo-name{
+    text-decoration: none;
+    font-size:1rem;
+    color: white;
+}
+
+.my-card{
+    border: solid 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all .6s;
+
+}
+.desc{
+    height: 12.5rem;
+}
+.card-footer{
+    position: relative;
+}
+.card-footer ::after{
+    content: "";
+    width: 305px;
+    height: 1px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    right: -18px;
+    bottom: 35px;
+}
+.game-price{
+    background-color: #3E68A7;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+.my-card:hover .game-price{
+    background-color: #0D6EFD;
+    transition: all .6s;
+}
+.category,.platform{
+    background-color: #32383E;
+    border-radius: 10px;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+.card-photo img{
+    filter: saturate(25%);
+    transition: all .6s;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+.my-card:hover .card-photo img{
+    filter: saturate(100%);
+
+}
+.my-card:hover{
+    transform: scale(1.06);
+}
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #272b30;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+.loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-left: 4px solid #FF3D00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+
+.details{
+    background-color: #27282B;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+}
+.details-info{
+    margin-top: 45px;
+    text-transform: capitalize;
+}
+.details-info span{
+    font-size: 16px;
+}
+.highlighted{
+    background-color: #0DCAF0;
+    padding: 0 5px ;
+    border-radius: 7px;
+    font-size: 12px;
+    color: black;
+    font-weight: 500;
+}
+.details-desc{
+    line-height: 1.2;
+    text-transform: none;
+}
+.title span{
+    font-size: 28px;
+}
+.show-game-btn{
+    border: solid 1px #FFC107;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    transition: all .5s;
+}
+.show-game-btn:hover{
+    background-color: #FFC107;
+}
+#closeDetails{
+    position: relative;
+    left: 100%;
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+    top: -35px;
+}
+#closeDetails:hover{
+    color: rgb(181, 178, 178);
+}
+@media screen and (max-width:768px) {
+    .main-nav{
+        width: 95%;
+    }
+    .links{
+        padding: 10px 0;
+        text-align: center;
+    }
+    .links li{
+        margin: 15px 0;
+    }
+    #closeDetails{
+        left: 90%;
+    }
+}
